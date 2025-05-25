@@ -60,7 +60,7 @@ export default function ListeView() {
 
   return (
     <div>
-      <Header />
+      <Header variant="black" />
       <div className="flex justify-end space-x-4">
         {/* Dropdown menu til at vælge by, sender valgt by op via onSelectCity */}
         <LocationDropdown onSelectCity={setSelectedCity} />

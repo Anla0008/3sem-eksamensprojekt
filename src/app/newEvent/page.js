@@ -7,7 +7,7 @@ export default function newEvent() {
 
   return (
     <div>
-      <Header />
+      <Header variant="black" />
       <h1 className="text-center">Opret Event</h1>
       <MakeNewEvent />
     </div>

@@ -2,13 +2,13 @@ import Link from "next/link";
 import BasketIcon from "./BasketIcon";
 import { useRouter } from "next/navigation";
 
-const MobileMenu = ({ isOpen, user, setIsOpen, textColor, setShowSignIn }) => {
+const MobileMenu = ({ isOpen, user, setIsOpen, textColor, setShowSignIn, variant = "lime" }) => {
   const router = useRouter();
 
   if (!isOpen) return null;
 
   return (
-<div className="absolute top-full right-0 bg-[#bab0bc] flex flex-col gap-4 z-10 py-4 px-10 items-center ">
+    <div className="absolute top-full right-0 bg-[#bab0bc] flex flex-col gap-4 z-10 py-4 px-10 items-center ">
       {!user && (
         <Link
           href="/events"
@@ -48,7 +48,7 @@ const MobileMenu = ({ isOpen, user, setIsOpen, textColor, setShowSignIn }) => {
       )}
 
       <Link href="/basket">
-        <BasketIcon />
+        <BasketIcon variant={variant} />
       </Link>
     </div>
   );
